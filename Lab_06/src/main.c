@@ -1,20 +1,29 @@
 int main()
 {
-	char src[] = {'L','o','u','i','s',' ','A','m','e','n'};			/*defining source array*/
-	int arr_size = sizeof(src);							/*getting size of default array*/
-	for (int i = 0; i <= arr_size; i++){						/*cycle for changing given characters*/
-		if (src[i] == 'a' || src[i] == 'A'){
-			src[i] = '@';
+	char src[] = "Ivanov        \0";				/*Defining source string*/
+	int src_size = (sizeof(src) - 2);				/*Defining size of array(non-including '\0' symbol*/
+	char src_temp[sizeof(src)];					/*Defining array for temporary result*/
+	for (int i = 0; i <= sizeof(src_temp); i++){			/*filling cycle for temporary array*/
+		src_temp[i] = 0;						
+	}
+	int spaces = 0;
+	for (int i = 0; i < src_size; i++){				/*cycle to find space symbols*/
+		if (src[i] == ' '){
+			spaces += 1;
 		}
-		else if (src[i] == 'o' || src[i] == 'O'){
-			src[i] = '0';
+	} 
+	for (int i = 0; i < src_size; i++){				/*cycle to center the source array and write it to temporary*/
+		if (src[i] != ' '){
+			src_temp[i + spaces / 2] = src[i];
 		}
-		else if (src[i] == 'i' || src[i] == 'I'){
-			src[i] = '1';
+	}
+	for (int i = 0; i < src_size; i++){				/*cycle to fill spaces with filler symbols*/
+		if (src_temp[i] == 0){
+			src[i] = '_';
 		}
-		else if (src[i] == 's' || src[i] == 'S'){
-			src[i] = '$';
-		}
+		else{							/*wrirting symbols from temporary to main array*/
+			src[i] = src_temp[i];
+		}	
 	}
 	return 0;
 }
