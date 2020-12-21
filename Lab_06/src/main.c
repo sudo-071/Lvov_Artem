@@ -1,8 +1,8 @@
 int main()
 {
-	char src[] = {'L','o','u','i','s',' ','A','m','e','n'};
-	int arr_size = sizeof(src);
-	for (int i = 0; i <= arr_size; i++){
+	char src[] = {'L','o','u','i','s',' ','A','m','e','n'};		/*defining source array*/
+	int arr_size = sizeof(src);						/*getting size of source array*/
+	for (int i = 0; i <= arr_size; i++){					/*cycle for changing given characters*/
 		if (src[i] == 'a' || src[i] == 'A'){
 			src[i] = '@';
 		}
