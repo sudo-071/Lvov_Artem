@@ -69,11 +69,11 @@
 
 ## Виведення результату роботи програми
 
-![text](file:///home/o71/Lvov_Artem/Lab_08_09_10/md/output_results/Lab_06_m)
+![text](https://github.com/sudo-071/Lvov_Artem/blob/master/Lab_08_09_10/md/output_results/Lab_06_m.png)
 
 ## Блок-схема
 
-![text](file:///home/o71/Lvov_Artem/Lab_08_09_10/md/flowcharts/Lab_06_m)
+![text](https://github.com/sudo-071/Lvov_Artem/blob/master/Lab_08_09_10/md/flowcharts/Lab_06_m.png)
 
 ## Висновок
 
